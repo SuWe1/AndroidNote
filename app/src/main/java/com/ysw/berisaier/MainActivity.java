@@ -1,5 +1,6 @@
 package com.ysw.berisaier;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,10 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn1:
-
+                Intent intent1=new Intent(MainActivity.this,Act1.class);
+                startActivity(intent1);
                 break;
             case R.id.btn2:
-
+                Intent intent2=new Intent(MainActivity.this,Act2.class);
+                startActivity(intent2);
                 break;
         }
     }
