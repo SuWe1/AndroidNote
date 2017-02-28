@@ -1,8 +1,10 @@
-package com.ysw.berisaier;
+package com.ysw.berisaier.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.ysw.berisaier.R;
 
 /**
  * Created by 11033 on 2017/2/27.

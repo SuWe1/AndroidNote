@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ysw.berisaier.MainActivity">
+    tools:context="com.ysw.berisaier.activity.MainActivity">
 
    <Button
        android:id="@+id/btn1"
@@ -17,6 +17,13 @@
    <Button
        android:id="@+id/btn2"
        android:text="三阶贝塞尔曲线"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       android:layout_gravity="center"/>
+   <Button
+       android:id="@+id/btn3"
+       android:text="路径动画"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:textSize="20sp"

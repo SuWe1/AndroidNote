@@ -1,4 +1,4 @@
-package com.ysw.berisaier;
+package com.ysw.berisaier.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
