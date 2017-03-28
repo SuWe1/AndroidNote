@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_only_retrofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="OnlyRetrofit"
+        android:textAllCaps="false"
+        android:onClick="retrofitOnClick"/>
+
+    <View
+        android:layout_below="@+id/btn_rxjava_retrofit"
+        android:id="@+id/view_division"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view_division"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_rxjava_retrofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="RxjavaWithRetrofit"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btn_only_retrofit"
+        android:onClick="retrofitOnClickRxjava"/>
+</RelativeLayout>
