@@ -27,6 +27,7 @@ public class MapActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ItemAdapter adapter=new ItemAdapter();
 
+    private int page=1;
     Observer<List<Item>> observer=new Observer<List<Item>>() {
         @Override
         public void onCompleted() {
@@ -55,8 +56,8 @@ public class MapActivity extends AppCompatActivity {
     }
 
 
-    private void load(){
-        Network.getMeiziEntity().getMeizi(10,1)
+    private void load(int page){
+        Network.getMeiziEntity().getMeizi(10,page)
                 .map(GankMeiziResultToItemsMapper.getInstance())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -64,6 +65,19 @@ public class MapActivity extends AppCompatActivity {
     }
 
     public void loadImg(View view) {
-        load();
+        load(1);
+    }
+
+    public void loadNext(View view) {
+        page++;
+        load(page);
+    }
+
+    public void loadprevious(View view) {
+        if ((page-1)>0){
+            page--;
+            load(page);
+        }
+        load(1);
     }
 }

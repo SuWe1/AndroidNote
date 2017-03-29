@@ -1,4 +1,4 @@
-package com.ysw.rxjavaretrofit;
+package com.ysw.rxjavaretrofit.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ysw.R;
+import com.ysw.rxjavaretrofit.MeiziEntity;
+import com.ysw.rxjavaretrofit.Network;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,12 +22,12 @@ import rx.schedulers.Schedulers;
  * Created by Swy on 2017/3/28.
  */
 
-public class MainActicity extends AppCompatActivity {
+public class BaseActicity extends AppCompatActivity {
     TextView textView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rxjava_retrofir_main);
+        setContentView(R.layout.rxjava_retrofir_base);
         textView= (TextView) findViewById(R.id.tv_response);
     }
 
@@ -34,7 +36,7 @@ public class MainActicity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MeiziEntity> call, Response<MeiziEntity> response) {
                 textView.setText(response.body().toString());
-                Toast.makeText(MainActicity.this,response.body().getResults().toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(BaseActicity.this,response.body().getResults().toString(),Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -63,7 +65,7 @@ public class MainActicity extends AppCompatActivity {
                     @Override
                     public void onNext(MeiziEntity meiziEntity) {
                         textView.setText(meiziEntity.toString());
-                        Toast.makeText(MainActicity.this,meiziEntity.getResults().toString(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BaseActicity.this,meiziEntity.getResults().toString(),Toast.LENGTH_SHORT).show();
                     }
                 });
     }

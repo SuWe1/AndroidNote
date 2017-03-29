@@ -1,5 +1,7 @@
 package com.ysw.rxjavaretrofit;
 
+import com.ysw.rxjavaretrofit.flatmap.FakeApi;
+
 import retrofit2.CallAdapter;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
@@ -14,6 +16,7 @@ public class Network {
     private static final String baseMeiziUrl ="http://gank.io/api/";
 
     private static MeiziApi meiziApi;
+    private static FakeApi fakeApi;
 
     private static Converter.Factory gsonConverterFactory= GsonConverterFactory.create();
     private static CallAdapter.Factory rxJavaCallAdapterFactory = RxJavaCallAdapterFactory.create();
@@ -28,6 +31,13 @@ public class Network {
             meiziApi=retrofit.create(MeiziApi.class);
         }
         return meiziApi;
+    }
+
+    public static FakeApi getFakeApi() {
+        if (fakeApi == null) {
+            fakeApi = new FakeApi();
+        }
+        return fakeApi;
     }
 
 }

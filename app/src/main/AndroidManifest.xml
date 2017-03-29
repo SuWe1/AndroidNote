@@ -21,6 +21,10 @@
         <activity android:name=".berisaier.activity.Act2"/>
         <activity android:name=".berisaier.activity.Act3"/>
         <activity android:name=".berisaier.activity.MainActivity"/>
+        <!--RxJava Retrofit -->
+        <activity android:name=".rxjavaretrofit.base.BaseActicity"/>
+        <!--<activity android:name=".rxjavaretrofit.map.MapActivity"/>-->
+        <activity android:name=".rxjavaretrofit.flatmap.FlatMapActivity"/>
     </application>
 
 </manifest>

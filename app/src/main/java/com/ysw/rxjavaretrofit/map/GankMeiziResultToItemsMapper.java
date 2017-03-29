@@ -17,7 +17,7 @@ import rx.functions.Func1;
 //第一个为输入参数类型 第二个为还回参数类型
 public class GankMeiziResultToItemsMapper  implements Func1<MeiziEntity,List<Item>>{
     private static final String TAG = "GankMeiziResultToItemsM";
-    private static GankMeiziResultToItemsMapper gankMeiziResultToItemsMapper;
+    private static GankMeiziResultToItemsMapper gankMeiziResultToItemsMapper=new GankMeiziResultToItemsMapper();
     public GankMeiziResultToItemsMapper() {
     }
     public static GankMeiziResultToItemsMapper getInstance(){return gankMeiziResultToItemsMapper;}
