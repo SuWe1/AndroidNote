@@ -39,5 +39,7 @@ dependencies {
     compile 'com.wx.goodview:goodview:1.0.0'
     //realm
     apply plugin: 'realm-android'
+    //Chrome Custom Tab
+    compile 'com.android.support:customtabs:25.1.1'
     testCompile 'junit:junit:4.12'
 }

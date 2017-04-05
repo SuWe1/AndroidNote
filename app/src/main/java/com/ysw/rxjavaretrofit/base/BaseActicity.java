@@ -22,7 +22,7 @@ import rx.schedulers.Schedulers;
  * Created by Swy on 2017/3/28.
  */
 
-public class BaseActicity extends AppCompatActivity {
+public class  BaseActicity extends AppCompatActivity {
     TextView textView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
