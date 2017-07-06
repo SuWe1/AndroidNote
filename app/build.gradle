@@ -10,6 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        使用RenderScript实现高斯模糊(毛玻璃/磨砂)效果
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -42,5 +45,6 @@ dependencies {
     apply plugin: 'realm-android'
     //Chrome Custom Tab
     compile 'com.android.support:customtabs:25.1.1'
+    compile 'com.jakewharton:butterknife:7.0.0'
     testCompile 'junit:junit:4.12'
 }

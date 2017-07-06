@@ -34,6 +34,17 @@ public class GoodHandler extends Activity {
     private final  myHandler handler=new myHandler(this);
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacks(new Runnable() {
+            @Override
+            public void run() {
+                
+            }
+        });
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         handler.post(new Runnable() {
