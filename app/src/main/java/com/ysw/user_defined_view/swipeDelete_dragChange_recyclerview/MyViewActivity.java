@@ -46,7 +46,6 @@ public class MyViewActivity extends AppCompatActivity {
         swipeDeleteDragChangeRecyclerview.setItemAnimator(new DefaultItemAnimator());
         swipeDeleteDragChangeRecyclerview.setHasFixedSize(true);
         swipeDeleteDragChangeRecyclerview.setAdapter(adapter);
-
     }
 
     /**
